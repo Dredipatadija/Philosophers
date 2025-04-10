@@ -36,3 +36,13 @@ typedef struct s_data
 	t_fork	*forks;
 	t_philo	*philos;
 }	t_data;
+
+int		main(int ac, char **av);
+void	ft_parsearg(char **av);
+int		ft_checklen(char *arg);
+int		ft_checkint(char *arg);
+void	ft_arg_data(t_data *data, int ac, char **av);
+void	ft_mutex_handle(t_mutex *mtx, int op);
+void	ft_thread_handle(t_thread *thread, int op,
+			void *(*ft_start)(void *), t_data *data);
+void	ft_error1(char *str);
