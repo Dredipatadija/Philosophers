@@ -10,4 +10,8 @@ void	ft_arg_data(t_data *data, int ac, char **av)
 		data->min_meals = ft_atoi(av[5]);
 	else
 		data->min_meals = -1;
+	data->dieorfull = 0;
+	data->philos = malloc(sizeof(t_philo) * data->num_philos);
+	if (!data->philos)
+		ft_error1("Error: malloc failed for philosopher array\n");
 }

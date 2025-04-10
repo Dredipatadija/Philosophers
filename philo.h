@@ -30,7 +30,7 @@ typedef struct s_data
 	long	time_to_eat;
 	long	time_to_sleep;
 	long	min_meals;
-	long	num_meals;
+
 	long	start_time;
 	int		dieorfull;
 	t_fork	*forks;
