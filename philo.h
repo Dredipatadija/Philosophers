@@ -8,8 +8,8 @@
 typedef struct s_philo
 {
 	int			philo_id;
-	t_fork		*left_fork;
-	t_fork		*right_fork;
+	t_fork		*first_fork;
+	t_fork		*second_fork;
 	int			n_meals;
 	int			full;
 	long		last_meal;
@@ -25,7 +25,7 @@ typedef struct s_fork
 
 typedef struct s_data
 {
-	long	num_philos;
+	long	num_phi;
 	long	time_to_die;
 	long	time_to_eat;
 	long	time_to_sleep;
@@ -36,13 +36,3 @@ typedef struct s_data
 	t_fork	*forks;
 	t_philo	*philos;
 }	t_data;
-
-int		main(int ac, char **av);
-void	ft_parsearg(char **av);
-int		ft_checklen(char *arg);
-int		ft_checkint(char *arg);
-void	ft_arg_data(t_data *data, int ac, char **av);
-void	ft_mutex_handle(t_mutex *mtx, int op);
-void	ft_thread_handle(t_thread *thread, int op,
-			void *(*ft_start)(void *), t_data *data);
-void	ft_error1(char *str);
