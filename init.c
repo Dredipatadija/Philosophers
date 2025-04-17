@@ -14,10 +14,12 @@ void	ft_init_data(t_data *data, int ac, char **av)
 	else
 		data->min_meals = -1;
 	data->dieorfull = 0;
+	data->allready = 0;
 	data->philos = &philos;
 	data->forks = &forks;
 	ft_init_forks(data);
 	ft_init_philos(data);
+	ft_mutex_handle(&data->start_mtx, 3);
 }
 
 void	ft_init_forks(t_data *data)

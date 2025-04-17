@@ -25,14 +25,15 @@ typedef struct s_fork
 
 typedef struct s_data
 {
-	long	num_phi;
-	long	time_to_die;
-	long	time_to_eat;
-	long	time_to_sleep;
-	long	min_meals;
-
-	long	start_time;
-	int		dieorfull;
-	t_fork	*forks;
-	t_philo	*philos;
+	long			num_phi;
+	long			time_to_die;
+	long			time_to_eat;
+	long			time_to_sleep;
+	long			min_meals;
+	int				allready;
+	long			start_time;
+	int				dieorfull;
+	t_fork			*forks;
+	t_philo			*philos;
+	pthread_mutex_t	start_mtx;
 }	t_data;
